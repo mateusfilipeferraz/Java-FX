@@ -6,8 +6,6 @@ package classes;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 
 
 
@@ -156,7 +154,7 @@ int id = at-an;
 
    int resposta= (id);
        
-   if(resposta >= 18){
+ /*  if(resposta >= 18){
         //se a idade for mais de 18 mostra a fase abaixo escrita 
         lblHb.setText("Pode tirar habilitação");
     }
@@ -165,8 +163,11 @@ int id = at-an;
 // caso menor de 18 mostra a frase abaixo esctita 
       lblHb.setText("Não Pode tirar habilitação");           
    }  
+   */
+ String sit = ( id>= 18) ? "Pode tirar habilitação" : "Não pode tirar habilitação ";
     lblIdade.setText(Integer.toString(id));
     lblAt.setText( currentYear);
+    lblHb.setText(sit);
 
     }//GEN-LAST:event_btnCalqueActionPerformed
  
