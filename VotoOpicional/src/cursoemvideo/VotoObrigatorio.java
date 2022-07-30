@@ -167,14 +167,24 @@ public class VotoObrigatorio extends javax.swing.JFrame {
         panRes.setVisible(true);
           Date date = new Date();
         SimpleDateFormat geYaDateFormat= new  SimpleDateFormat("yyyy");
-    String currentYear = geYaDateFormat.format(date);   
+    String currentYear = geYaDateFormat.format(date);  
         int ano= Integer.parseInt(txtAn1.getText());   
         int at = Integer.parseInt(currentYear);
         int idade =  at - ano;
+        if (idade<16) {lblSit.setText("Não vota!"); 
+        }
+        else{
+            if ((idade>=16 && idade<18) || (idade>70)) { lblSit.setText("Opcional");
+                
+            }
+            else{
+                lblSit.setText("Obrigatório");
+            }
+        }
         lblId.setText(Integer.toString(idade));
-        String sit = ((idade>= 16 && idade<18)|| (idade>70))? "Opcional" : "Obrigatório"; 
+       /* String sit = ((idade>= 16 && idade<18)|| (idade>70))? "Opcional" : "Obrigatório"; 
         lblSit.setText(sit);
-        
+        */
         
         
         
