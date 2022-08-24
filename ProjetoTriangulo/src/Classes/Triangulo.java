@@ -211,16 +211,16 @@ public class Triangulo extends javax.swing.JFrame {
             lblEs.setText("É um Triângulo");
             if (a == b && b == c) {
                 lblTr.setText("Triângulo equilátero");
-        }else if (a != b && b != c && c != a) {
-            lblTr.setText(" Triângulo escaleno");
-        }else {
-            lblTr.setText("Triângulos isósceles");
-        }
-        }else{
+            } else if (a != b && b != c && c != a) {
+                lblTr.setText(" Triângulo escaleno");
+            } else {
+                lblTr.setText("Triângulos isósceles");
+            }
+        } else {
             lblEs.setText("Não e um triângulo");
             lblTr.setText("--------------");
-                }                                 
-                                 
+        }
+
         panRes.setVisible(true);
 
     }//GEN-LAST:event_btnVerificarActionPerformed
